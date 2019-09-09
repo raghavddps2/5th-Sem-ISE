@@ -1,0 +1,52 @@
+<html>
+<head>
+   <title>Javascript program to calculate multiplication and addition of 2 numbers</title>
+    <script type="text/javascript">
+            function multiply(){
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var res = num1*num2;
+                document.getElementById("result").innerHTML = res;  
+            }
+        </script>
+        <script>
+             function add(){
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var res = num1+num2;
+                document.getElementById("result").innerHTML = res;  
+            }
+        </script>
+         <script type="text/javascript">
+            function divide(){
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                if(num2 === 0)
+                document.getElementById("result").innerHTML = "Can't divide by 0";  
+                var res = num1/num2;
+                document.getElementById("result").innerHTML = res;  
+            }
+        </script>
+        <script>
+             function subtract(){
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var res = num1-num2;
+                document.getElementById("result").innerHTML = res;  
+            }
+        </script>
+</head>
+<body>
+    <form action="re">
+        1st Number : <input type="text" id="firstnumber"><br>
+        2nd Number : <input type="text" id="secondnumber"><br>
+        <input type="button" onclick="multiply()" id="multiplying" value="*"><br>
+        <input type="button" onclick="add()" id="adding" value="+"><br>
+        <input type="button" onclick="divide()" id="dividing" value="/"><br>
+        <input type="button" onclick="subtract()" id="subtracting" value="-"><br>
+    </form>
+    <p>The Result is : <br>
+    <span id="result"></span>
+    </p>
+</body>
+</html>
