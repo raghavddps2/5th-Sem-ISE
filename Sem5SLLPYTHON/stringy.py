@@ -13,9 +13,7 @@ for i in str2:
 print(strrev)
 
 for i in str2:
-    if any(char.isdigit() for char in i):
-        for char in i:
-            if(str(char).isdigit()):
+    for char in i:
+        if(str(char).isdigit()):
                 print(char)
-        print()
-
+    print()
