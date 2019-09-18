@@ -17,15 +17,12 @@ class SentenceReverser:
 items = []
 
 for i in range(3):
-	sentence = input("Enter a phrase :")
-	reverser = SentenceReverser(sentence.strip())
+	reverser = SentenceReverser(input("Enter a sentence :"))
 	items.append(reverser)
 	print(reverser.reverse)
 
-sortedItems = sorted(items, key=lambda item: item.getVowelCount(), reverse=True)
-
-print ("Sorted on vowel count (descending) : \n")
-for i in range(len(sortedItems)):
-	print ("Reverse : ", sortedItems[i].getReverse(), ", Vowel Count : ", sortedItems[i].getVowelCount())
+print ("Sorted descending vovel count: ")
+for i in sorted(items,key=lambda item:item.getVowelCount(),reverse=True):
+	print (i.getReverse(),"->",i.getVowelCount())
 
 
