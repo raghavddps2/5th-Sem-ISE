@@ -31,9 +31,9 @@ for i,j in sl[:10]:
 print(word)
 
 sum=reduce((lambda x,y:x+y),word)
-print "sum is",sum
+print("sum is",sum)
 avg=sum/len(word)
-print "Avg is",avg
+print("Avg is",avg)
 
 sq=[]
 for x in word:
