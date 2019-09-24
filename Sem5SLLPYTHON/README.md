@@ -7,7 +7,7 @@
 Use git to get all the codes in one go.
 
 ```bash
-git clone https://github.com/nimishbongale/5th-Sem-ISE.git
+git clone https://github.com/nimishbongale/5th-Sem-ISE.git  
 ```
 
 ## Contributing
