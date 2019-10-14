@@ -11,9 +11,7 @@ def remdup():
 create_list()
 print(remdup())
 
-#1b)
 print([ i for i in range(28) if i%2 == 0])
 
-#1c)
 l3 = ["This","is","XYZ","Here"]
 print(l3[::-1])
