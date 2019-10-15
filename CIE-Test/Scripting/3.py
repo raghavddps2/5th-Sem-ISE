@@ -21,7 +21,7 @@ for i in range(3):
 	items.append(reverser)
 	print(reverser.reverse)
 
-print ("Sorted descending vovel count: ")
+print ("Sorted descending vowel count: ")
 for i in sorted(items,key=lambda item:item.getVowelCount(),reverse=True):
 	print (i.getReverse(),"->",i.getVowelCount())
 
