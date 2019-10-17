@@ -1,0 +1,38 @@
+SQL> create table boat(
+  2  bid int primary key,
+  3  bname varchar(10),
+  4  colour varchar(10));
+
+SQL> create table sailor(
+  2  sid int primary key,
+  3  sname varchar(10),
+  4  age int,
+  5  rating int);
+
+SQL> create table reserves(
+  2  bid int,
+  3  sid int,
+  4  day int,
+  5  primary key(sid,bid),
+  6  foreign key(bid) references boat(bid) on delete cascade,
+  7  foreign key(sid) references sailor(sid) on delete cascade);
+
+SQL> insert into boat values(&bid,&bname,&colour);
+SQL> insert into sailor values(&sid,&sname,&age,&rating);
+SQL> insert into reserves values(&bid,&sid,&day);
+
+3a)
+SQL> select * from boat,sailor
+  2  where sname='Ram';
+
+3b)
+SQL> select bid,sid from reserves;
+
+3c)
+SQL> select sid,count(bid) from reserves group by sid;
+
+
+
+
+
+

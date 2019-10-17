@@ -7,7 +7,7 @@ if(len(sys.argv) != 2):
 	print ("Invalid Arguments")
 	sys.exit()
 
-if(not(os.path.exists(sys.argv[0]))):
+if(not(os.path.exists(sys.argv[1]))):
 	print ("Invalid File Path")
 	sys.exit()
 
