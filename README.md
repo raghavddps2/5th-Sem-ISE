@@ -4,7 +4,7 @@
 
 ## Installation
 
-Use git to get all the codes in one go.
+Use git or download zip to get all the codes in one go.
 
 ```bash
 git clone https://github.com/nimishbongale/5th-Sem-ISE.git  
