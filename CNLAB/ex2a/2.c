@@ -4,22 +4,11 @@
 
 int main()
 {
-int orate,drop=0,cap,x,count=0,inp[10]={0},i=0,nsec,ch;
-printf(" \n enter bucket size : ");
-scanf("%d",&cap);
-printf("\n enter output rate :");
-scanf("%d",&orate);
-  
-do{
-printf("\n enter number of packets coming at second %d : ",i+1);
-scanf("%d",&inp[i]);
-i++;
-printf("\n enter 1 to contiue or 0 to quit..........");
-scanf("%d",&ch);
-}while(ch);
-
+int orate=2,drop=0,cap=5,x,count=0,inp[10]={0},nsec,ch,i=0;
+for(i=0;i<5;i++)
+	inp[i]=rand()%10;
 nsec=i;
-printf("\n second \t recieved \t sent \t dropped \t remained \n");
+printf("\n second       recieved        sent      dropped       remained \n");
 for(i=0;count || i<nsec;i++)
 {
  printf("%d",i+1);
