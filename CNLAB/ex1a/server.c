@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
+#include <sys/socket.h> //for sockaddr structures, socklen
+#include <netinet/in.h> //sa/in_addr_t family data types
 #include <string.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <arpa/inet.h>
-#include <fcntl.h> 
+#include <unistd.h>//for NULL pointer and miscellaneous functions
+#include <arpa/inet.h> //agent for netinet structs
+  #include <fcntl.h> //file control header
 
 #define bufsize 1024
 
