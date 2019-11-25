@@ -1,22 +1,22 @@
 from flask import Flask, redirect, render_template, request, url_for, session
 import time
-import re
+import re #regular expressions
 
 app = Flask(__name__)
 
 # Secret key for sessions
-app.secret_key = "secret"
+app.secret_key = "secret" # for pretected routes
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
 	try:
-		balance = session["balance"]
+		balance = session["balance"] #after session has been initialized
 	except KeyError:
-		balance = session["balance"] = 8000
+		balance = session["balance"] = 8000 # first time only
 
 
-	if request.method == "GET":
-		return render_template("index.html", balance=balance, msg="")
+	if request.method == "GET": #initialize get route,blank msg
+		return render_template("index.html", balance1=balance, msg="")
 
 	if request.method == "POST":
 
@@ -48,7 +48,7 @@ def index():
 				balance = balance - int(request.form["amount"])
 				session["balance"] = balance
 				msg = "Money Withdrawn"
-				return render_template("index.html", balance=balance, msg=msg)
+				return render_template("index.html", balance1=balance, msg=msg)
 
 		# Checks if user clicked on Deposit
 		elif request.form["action"] == 'Deposit':
