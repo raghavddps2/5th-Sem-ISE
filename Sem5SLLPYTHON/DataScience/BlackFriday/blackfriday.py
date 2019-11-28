@@ -7,11 +7,11 @@ import seaborn as sns
 black_df = pd.read_csv("BlackFriday.csv")
 
 print("======Data Headers=======")
-black_df.head()
+black_df.head() #first 5 rows
 
 print("=====Data Decription=====")
-black_df.info()
-black_df.describe()
+black_df.info() # object, attributes with their datatypes 
+black_df.describe() # gives all data statistics 
 
 black_df = black_df.drop(['User_ID', 'Product_ID', 'Stay_In_Current_City_Years'], axis=1)
 black_df.head()
