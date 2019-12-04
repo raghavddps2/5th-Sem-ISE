@@ -20,5 +20,6 @@ foreign key(code) references branch(code) on delete cascade
 
 insert into branch values('&code','&name',&assets);
 insert into customer values(&ssn,'&custname','&place');
-insert into account values('&accno','&ssn','&code',&balance);
+              -- ssn is defined to be an integer.
+insert into account values('&accno',&ssn,'&code',&balance);
 
